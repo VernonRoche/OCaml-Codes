@@ -1,0 +1,26 @@
+Exercice 6.1 1. Réécrire avec le type prédéfini list de OCaML , les fonctions interval_list, map, list_length
+et filter écrites précédemment avec le type 'a mylist .
+2. Écrire les fonctions de conversion entre les listes de type 'a mylist et les listes prédéfinies en OCaML
+( list_of_mylist, mylist_of_list ).
+
+Exercice 6.2 1. Écrire une fonction replicate x k qui construit la liste composée de k répétitions de
+l’élément x .
+2. Quel est le type de votre fonction ?
+3. Écrire une version récursive terminale de cette fonction.
+
+Exercice 6.3 1. Écrire une fonction reverse l qui prend en paramètre une liste l quelconque et retourne
+une liste constituée des éléments de l en sens inverse.
+2. Indiquer si la fonction écrite est récursive terminale. Donner sa complexité.
+3. Donner une version linéaire et récursive terminale.
+
+Exercice 6.4 1. Écrire une fonction iota_r qui prend en argument un entier n et renvoie la liste
+[n; n-1; ...; 1] .
+2. Écrire une fonction iota qui prend en argument un entier n et renvoie la liste [1; ...; n-1; n] .
+3. Donner les complexités de vos fonctions.
+4. Donner des versions linéaires et récursives terminales de ces fonctions.
+5. Tester les fonctions avec des valeurs de n de plus en plus grandes.
+6. Expliquer pourquoi la solution suivante est mauvaise :
+let rec bad_iota n =
+if n = 0
+then []
+else (bad_iota (n - 1)) @ [n]
