@@ -1,0 +1,27 @@
+Exercice 3.1 Quel est le type de la fonction fun x y -> (x, y) ?
+========================================================================
+Exercice 3.2 Quel est le type de la fonction compose vue précédemment ?
+let compose f g = fun x -> f (g x)
+========================================================================
+Exercice 3.3 Soient les types couleur et carte définis comme suit :
+type couleur = Pique | Coeur | Carreau | Trefle;;
+type carte =
+As of couleur
+| Roi of couleur
+| Dame of couleur
+| Valet of couleur
+| Numero of int * couleur
+• Écrire un prédicat est_une_figure carte de type carte -> bool qui retourne true si carte
+est une figure, false sinon.
+• Écrire un prédicat est_de_couleur carte couleur de type carte -> couleur -> bool qui retourne true si carte est de couleur couleur .
+========================================================================
+Exercice 3.4 1. Définir un type carburant ayant trois constructeurs Diesel , Essence ou Electrique .
+2. Un véhicule est caractérisé par son carburant et son nombre de roues. Définir un type vehicule
+répondant à ces critères.
+3. Lors des pics de pollution, les véhicules diesel à 4 roues au moins sont interdits. Écrire une fonction
+peut_rouler : vehicule -> bool qui teste si un véhicule est autorisé.
+4. Pour rouler 100km, un véhicule électrique consomme environ 10kWh, un véhicule diesel consomme environ 6L de carburant, et un véhicule essence consomme environ 8L. Sachant qu’1kWh coûte 0.25 EUR et
+qu’un litre de carburant coûte 1.5 EUR, écrire une fonction consommation : vehicule -> int -> float
+telle que consommation v n renvoie le coût d’utilisation du véhicule v sur n kilomètres.
+5. Ajouter un constructeur au type carburant de façon à prendre en compte les véhicules hybrides
+(pouvant fonctionner avec deux types de carburants), et donner un exemple de véhicule hybride
