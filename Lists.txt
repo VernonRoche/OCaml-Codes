@@ -1,18 +1,41 @@
+Exercice 5.2 1. Les entiers de Peano sont une représentation des entiers naturels. Ils sont construits à partir
+de 0 en appliquant la fonction successeur. Par exemple, 1 est le successeur de 0, et 2 est le successeur
+du successeur de 0.
+Pour un élément m ∈ N on peut définir les suites (m + n)n∈N et (m × n)n∈N comme il suit :
+(m + n)n∈N =
+
+m + 0 = m
+∀n ∈ N m + S(n) = S(m + n)
+
+(1)
+(m × n)n∈N =
+
+m × 0 = 0
+∀n ∈ N m × S(n) = (m × n) + m
+
+(2)
+a. Proposer un type OCaml appelé peano pour représenter les entiers de cette façon. Le type aura
+deux constructeurs : un pour représenter 0, l’autre pour représenter le successeur d’un entier.
+b. Écrire la fonction d’addition sur ces entiers.
+c. Écrire la fonction de multiplication sur ces entiers.
+1
+d. Écrire les fonctions de conversion peano_of_int et int_of_peano 
+===================================================================================
 Exercice 6.1 1. Réécrire avec le type prédéfini list de OCaML , les fonctions interval_list, map, list_length
 et filter écrites précédemment avec le type 'a mylist .
 2. Écrire les fonctions de conversion entre les listes de type 'a mylist et les listes prédéfinies en OCaML
 ( list_of_mylist, mylist_of_list ).
-
+===================================================================================
 Exercice 6.2 1. Écrire une fonction replicate x k qui construit la liste composée de k répétitions de
 l’élément x .
 2. Quel est le type de votre fonction ?
 3. Écrire une version récursive terminale de cette fonction.
-
+===================================================================================
 Exercice 6.3 1. Écrire une fonction reverse l qui prend en paramètre une liste l quelconque et retourne
 une liste constituée des éléments de l en sens inverse.
 2. Indiquer si la fonction écrite est récursive terminale. Donner sa complexité.
 3. Donner une version linéaire et récursive terminale.
-
+===================================================================================
 Exercice 6.4 1. Écrire une fonction iota_r qui prend en argument un entier n et renvoie la liste
 [n; n-1; ...; 1] .
 2. Écrire une fonction iota qui prend en argument un entier n et renvoie la liste [1; ...; n-1; n] .
